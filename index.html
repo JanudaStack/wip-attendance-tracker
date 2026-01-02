@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/271236393_4958868984136733_580221551066885695_n-removebg-preview-150x150.png" type="image/x-icon">
+    <title>F & H WIP Attendance Tracker</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="capture-target">
+        <div class="header-section">
+            <div class="header-info">
+                <img src="assets/FH-logo-02-2-2048x398.png" alt="Company Logo" class="header-logo">
+                <h1>WIP Meeting Attendance</h1>
+                <div id="current-week-display" class="date-display">Loading Date...</div>
+            </div>
+
+            <div class="controls no-capture">
+                <input type="text" id="new-user-name" placeholder="Enter Name">
+                <button class="btn btn-add" onclick="addUser()">+ Add</button>
+                <button class="btn btn-share" onclick="captureAndShare()">Share</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-responsive">
+                <table id="attendance-table">
+                    <thead>
+                        <tr id="table-header-row">
+                            <th>Team Member</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="legend">
+                <span><i class="dot" style="background:var(--present-bg)"></i> Present</span>
+                <span><i class="dot" style="background:var(--late-bg)"></i> Late</span>
+                <span><i class="dot" style="background:var(--leave-bg)"></i> On Leave</span>
+                <span><i class="dot" style="background:var(--excused-bg)"></i> Excused</span>
+                <span><i class="dot" style="background:var(--absent-bg)"></i> Absent</span>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
